@@ -1,6 +1,9 @@
+import MoviesList from "@/components/movies/movies-list";
 
 export default function Home() {
   return (
-    <div>Home page</div>
+    <>
+      <MoviesList />
+    </>
   );
 }
