@@ -41,13 +41,15 @@ const MoviesSearchResult = ({ search }) => {
   const filteredMovies = movies.filter((movie) => movie.Poster !== "N/A");
   return (
     <>
-      {
+      {filteredMovies ? (
         <ul className="flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row">
           {filteredMovies?.map((movie) => (
             <MovieItem key={movie.imdbID} movie={movie} />
           ))}
         </ul>
-      }
+      ) : (
+        <p className="text-2xl font-bold">No Search Results :( !</p>
+      )}
     </>
   );
 };
